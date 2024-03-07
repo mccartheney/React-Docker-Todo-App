@@ -5,7 +5,7 @@
 This project is a Todo application built with React.js, utilizing Docker for containerization. 
 Users can manage their todos efficiently, including adding new todos, marking them as complete, deleting todos, filtering todos based on their completion status, toggling between light and dark mode, and dragging and dropping to reorder items on the list.
 
-### The challenge
+### The challenge (In Development)
 
 Users should be able to:
 
