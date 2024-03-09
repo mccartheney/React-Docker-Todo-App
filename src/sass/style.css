@@ -45,4 +45,11 @@ table {
 input {
   -webkit-appearance: none;
   border-radius: 0;
+}
+
+.MainContent_background picture img {
+  width: 100vw;
+  height: 35vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
