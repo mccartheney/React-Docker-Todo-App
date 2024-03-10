@@ -48,7 +48,11 @@ input {
   border-radius: 0;
 }
 
+.MainContent_background picture {
+  display: block;
+}
 .MainContent_background picture img {
+  vertical-align: bottom;
   width: 100vw;
   height: 35vh;
   -o-object-fit: cover;
@@ -83,14 +87,47 @@ input {
   cursor: pointer;
 }
 
+.main_component_todo_todos_inputTodo {
+  margin-top: 20px;
+  border-radius: 3px;
+}
+.main_component_todo_todos_inputTodo .main_component_todo_todos_inputTodo-marker {
+  width: 18px;
+  height: 18px;
+  background: none;
+  border-radius: 50%;
+  border: 1px solid hsl(234, 11%, 52%);
+  margin: 10px;
+}
+.main_component_todo_todos_inputTodo .main_component_todo_todos_inputTodo-input {
+  width: calc(100% - 50px);
+  background: none;
+  border: none;
+}
+.main_component_todo_todos_inputTodo .main_component_todo_todos_inputTodo-input:focus {
+  outline: none;
+}
+
 body {
   font-family: "Josefin Sans", sans-serif;
 }
 
 .dark .main_component_todo {
+  background-color: hsl(235, 21%, 11%);
+}
+.dark .main_component_todo .main_component_todo_todos_inputTodo {
   background-color: hsl(237, 14%, 26%);
+}
+.dark .main_component_todo .main_component_todo_todos_inputTodo .main_component_todo_todos_inputTodo-input {
+  color: hsl(234, 39%, 85%);
 }
 
 .light .main_component_todo {
+  background-color: hsl(236, 33%, 92%);
+}
+.light .main_component_todo .main_component_todo_todos_inputTodo {
   background-color: hsl(0, 0%, 98%);
+}
+.light .main_component_todo .main_component_todo_todos_inputTodo .main_component_todo_todos_inputTodo-input {
+  color: hsl(236, 9%, 61%);
 }/*# sourceMappingURL=style.css.map */
