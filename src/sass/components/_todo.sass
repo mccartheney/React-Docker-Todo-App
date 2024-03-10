@@ -1,0 +1,26 @@
+.main_component_todo 
+    min-height: 65vh
+
+    .main_component_todo_todos
+        position: absolute
+        top: 50px
+        left: 50%
+        transform: translateX(-50%)
+
+        width: 30vw
+
+        .main_component_todo_todos_header
+
+            @include flexDisplay (row, center, space-between)
+
+            h1
+                font-size: 25px
+                color: white
+                letter-spacing: 10px
+                font-weight: 700
+
+            button
+                border: none
+                background: none
+                cursor: pointer
+        

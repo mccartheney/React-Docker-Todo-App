@@ -1,21 +1,13 @@
-const changeTheme = (theme, setTheme) => {
-    if (theme === "light") {setTheme("dark")}
-    else if (theme === "dark") {setTheme("light")}
-};
+import TodoHeader from "./TodoHeader/TodoHeader";
+
 
 const Todo = (props) => {
     const {theme, setTheme} = props;
 
     return (
         <div className="main_component_todo">
-            {/* header */}
-            <div className="main_component_todo_header">
-                <h1>
-                    TODO
-                </h1>
-
-                {/* button to change theme */}
-                <button onClick={() => changeTheme(theme, setTheme)}></button>
+            <div className="main_component_todo_todos">
+                <TodoHeader theme={theme} setTheme={setTheme}/>
             </div>
         </div>
     );

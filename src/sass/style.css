@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -52,4 +53,44 @@ input {
   height: 35vh;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.main_component_todo {
+  min-height: 65vh;
+}
+.main_component_todo .main_component_todo_todos {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30vw;
+}
+.main_component_todo .main_component_todo_todos .main_component_todo_todos_header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.main_component_todo .main_component_todo_todos .main_component_todo_todos_header h1 {
+  font-size: 25px;
+  color: white;
+  letter-spacing: 10px;
+  font-weight: 700;
+}
+.main_component_todo .main_component_todo_todos .main_component_todo_todos_header button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.dark .main_component_todo {
+  background-color: hsl(237, 14%, 26%);
+}
+
+.light .main_component_todo {
+  background-color: hsl(0, 0%, 98%);
 }/*# sourceMappingURL=style.css.map */

@@ -12,7 +12,7 @@ const App = () => {
 
     // return all components from App
     return(
-        <div className="mainContent">
+        <div className={`mainContent ${theme}`}>
             {/* component for background */}
             <Background theme={theme}/>
  
