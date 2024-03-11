@@ -87,6 +87,90 @@ input {
   cursor: pointer;
 }
 
+.main_component_todo_todos_todoList {
+  margin-top: 30px;
+  border-radius: 3px;
+}
+.main_component_todo_todos_todoList .main_component_todo_todos_todoList_todoItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(234, 11%, 52%);
+  height: 40px;
+}
+.main_component_todo_todos_todoList .main_component_todo_todos_todoList_todoItem .main_component_todo_todos_todoList_todoItem_check {
+  width: 12%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.main_component_todo_todos_todoList .main_component_todo_todos_todoList_todoItem .main_component_todo_todos_todoList_todoItem_check .disable {
+  height: 18px;
+  width: 18px;
+  border: 1px solid hsl(234, 11%, 52%);
+  border-radius: 50%;
+}
+.main_component_todo_todos_todoList .main_component_todo_todos_todoList_todoItem .main_component_todo_todos_todoList_todoItem_check .disable:hover {
+  cursor: pointer;
+  position: relative;
+  border: double 1px transparent;
+  border-radius: 20px;
+  background-image: linear-gradient(hsl(237, 14%, 26%), hsl(237, 14%, 26%)), radial-gradient(circle at top left, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+.main_component_todo_todos_todoList .main_component_todo_todos_todoList_todoItem .main_component_todo_todos_todoList_todoItem_check .enable {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  background: radial-gradient(circle at top left, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.main_component_todo_todos_todoList .main_component_todo_todos_todoList_todoItem .main_component_todo_todos_todoList_todoItem_value {
+  height: 100%;
+  color: hsl(236, 33%, 92%);
+  font-size: 13px;
+  width: 88%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.main_component_todo_todos_todoList .main_component_todo_todos_todoList_todoItem .main_component_todo_todos_todoList_todoItem_value .enable {
+  text-decoration: line-through;
+  color: hsl(234, 11%, 52%);
+}
+.main_component_todo_todos_todoList .main_component_todo_todos_todoList_todoItem .main_component_todo_todos_todoList_todoItem_value button {
+  display: none;
+  background: none;
+  border: none;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.main_component_todo_todos_todoList .main_component_todo_todos_todoList_todoItem .main_component_todo_todos_todoList_todoItem_value button img {
+  display: none;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+.main_component_todo_todos_todoList .main_component_todo_todos_todoList_todoItem:hover button {
+  display: flex;
+}
+.main_component_todo_todos_todoList .main_component_todo_todos_todoList_todoItem:hover button img {
+  display: block;
+}
+
 .main_component_todo_todos_inputTodo {
   margin-top: 20px;
   border-radius: 3px;
@@ -108,6 +192,30 @@ input {
   outline: none;
 }
 
+.main_component_todo_todos_todoList_filters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.main_component_todo_todos_todoList_filters .main_component_todo_todos_todoList_filters_quantity p {
+  color: hsl(234, 11%, 52%);
+  font-size: 10px;
+  margin: 15px;
+}
+.main_component_todo_todos_todoList_filters button {
+  margin: 5px;
+  background: none;
+  border: none;
+  color: hsl(234, 11%, 52%);
+  cursor: pointer;
+}
+.main_component_todo_todos_todoList_filters .main_component_todo_todos_todoList_filters_compleated button {
+  color: hsl(234, 11%, 52%);
+  font-size: 10px;
+  margin: 15px;
+}
+
 body {
   font-family: "Josefin Sans", sans-serif;
 }
@@ -121,6 +229,9 @@ body {
 .dark .main_component_todo .main_component_todo_todos_inputTodo .main_component_todo_todos_inputTodo-input {
   color: hsl(234, 39%, 85%);
 }
+.dark .main_component_todo .main_component_todo_todos_todoList {
+  background-color: hsl(237, 14%, 26%);
+}
 
 .light .main_component_todo {
   background-color: hsl(236, 33%, 92%);
@@ -129,5 +240,8 @@ body {
   background-color: hsl(0, 0%, 98%);
 }
 .light .main_component_todo .main_component_todo_todos_inputTodo .main_component_todo_todos_inputTodo-input {
-  color: hsl(236, 9%, 61%);
+  color: hsl(235, 19%, 35%);
+}
+.light .main_component_todo .main_component_todo_todos_todoList_todoItem {
+  background-color: hsl(0, 0%, 98%);
 }/*# sourceMappingURL=style.css.map */

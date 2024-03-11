@@ -4,6 +4,7 @@ import { useState } from "react";
 // import components
 import TodoHeader from "./TodoHeader/TodoHeader";
 import TodoInput from "./TodoInput/TodoInput";
+import TodoList from "./TodoList/TodoList";
 
 // Main Component Todo
 const Todo = (props) => {
@@ -11,7 +12,6 @@ const Todo = (props) => {
     const {theme, setTheme} = props;
 
     const [todoList, setTodoList] = useState([]);
-    console.log(todoList);
 
     // return main todo functionalities
     return (
@@ -23,6 +23,8 @@ const Todo = (props) => {
                 {/* create new todo */}
                 <TodoInput setTodoList={setTodoList} todoList={todoList}/>
 
+                {/* show todos and todo options */}
+                <TodoList todoList={todoList} setTodoList={setTodoList}/>
             </div>
         </div>
     );

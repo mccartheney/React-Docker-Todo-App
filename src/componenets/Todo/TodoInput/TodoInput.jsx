@@ -1,5 +1,5 @@
 // import react stuff
-import { useId, useState } from "react";
+import { useState } from "react";
 
 // funtion to create new todo
 const AddNewTodo = (event, value, id, setTodoList, todoList) => {
@@ -27,16 +27,13 @@ const TodoInput = (props) => {
     // create states for new todo input
     const [inputValue, setInputValue] = useState("")
 
-    // create new id
-    const id = useId();
-
     // return form
     return (
         // when submit that form:
         //      add new todo with arguments:
         //          -event, input value, id, listStates
         <form className="main_component_todo_todos_inputTodo" 
-            onSubmit={(event) => AddNewTodo(event, inputValue, id, setTodoList, todolist)}>
+            onSubmit={(event) => AddNewTodo(event, inputValue, Math.floor(Math.random() * 100), setTodoList, todolist)}>
             <input type="marker" disabled="disabled" className="main_component_todo_todos_inputTodo-marker" />
 
             {/* input with the value for new todo */}

@@ -1,18 +1,66 @@
-.main_component_todo_todos_inputTodo
-    margin-top: 20px
+.main_component_todo_todos_todoList
+            
+    margin-top: 30px
     border-radius: 3px
-    .main_component_todo_todos_inputTodo-marker
-        width: 18px
-        height: 18px
-        background: none
-        border-radius: 50%
-        border: 1px solid $Dark-Grayish-Blue
-        margin: 10px
+    .main_component_todo_todos_todoList_todoItem
+        @include flexDisplay (row, center, space-between)
+        border-bottom: 1px solid  $Dark-Grayish-Blue
+        height: 40px
 
-    .main_component_todo_todos_inputTodo-input
-        width: calc( 100% - 50px )
-        background: none
-        border: none
+        .main_component_todo_todos_todoList_todoItem_check
+            width: 12%
+            @include flexDisplay (row, center, center)
 
-        &:focus
-            outline: none
+            .disable
+                height: 18px
+                width: 18px
+                border: 1px solid $Dark-Grayish-Blue
+                border-radius: 50%
+
+                &:hover
+                    cursor: pointer
+                    position: relative	
+                    border: double 1px transparent
+                    border-radius: 20px
+                    background-image: linear-gradient($Very-Dark-Grayish-Blue, $Very-Dark-Grayish-Blue), radial-gradient(circle at top left, hsl(192, 100%, 67%), hsl(280, 87%, 65%))
+                    background-origin: border-box
+                    background-clip: content-box, border-box
+            
+            .enable 
+                cursor: pointer
+                @include flexDisplay (row, center, center)
+                border-radius: 50%  
+                height: 18px
+                width: 18px
+                background: radial-gradient(circle at top left, hsl(192, 100%, 67%), hsl(280, 87%, 65%))
+
+        .main_component_todo_todos_todoList_todoItem_value
+            height: 100%
+            color: $Light-Grayish-Blue-hover
+            font-size: 13px
+            width: calc( 88% )
+            @include flexDisplay (row, center, space-between)
+
+            .enable
+                text-decoration: line-through
+                color: $Dark-Grayish-Blue
+
+            button
+                display: none
+                background: none
+                border: none
+                width: 15px
+                height: 15px
+                margin-right: 10px
+                @include flexDisplay (row, center, center)
+
+                img
+                    display: none
+                    width: 15px
+                    height: 15px
+                    cursor: pointer
+        &:hover
+            button
+                display: flex
+                img
+                    display: block

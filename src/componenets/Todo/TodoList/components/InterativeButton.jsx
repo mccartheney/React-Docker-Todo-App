@@ -1,0 +1,34 @@
+import ClearCompleated from "../methods/ClearCompleated"
+
+const InterativeButtons = ({ setActualTodoOption, setTodoList, todoList }) => {
+
+    return (
+        <div className="main_component_todo_todos_todoList_filters">
+            <div className="main_component_todo_todos_todoList_filters_quantity">
+                <p>
+                    {todoList.filter(todoObj => todoObj.compleated === false).length} items left
+                </p>
+            </div>
+
+            <div className="main_component_todo_todos_todoList_filters_filters">
+                <button onClick={() => { setActualTodoOption("all") }}>
+                    All
+                </button>
+                <button onClick={() => { setActualTodoOption ("actived")}}>
+                    Active
+                </button>
+                <button onClick={() => { setActualTodoOption("compleated") }}>
+                    Compleated
+                </button>
+            </div>
+
+            <div className="main_component_todo_todos_todoList_filters_compleated">
+                <button onClick={() => { ClearCompleated(setTodoList)}}>
+                    Clear Compleated
+                </button>
+            </div>
+        </div>
+    )
+}
+
+export default InterativeButtons
