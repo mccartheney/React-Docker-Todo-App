@@ -1,7 +1,8 @@
+// import clear compleated method
 import ClearCompleated from "../methods/ClearCompleated"
 
+// create component to show all interative buttons 
 const InterativeButtons = ({ setActualTodoOption, setTodoList, todoList }) => {
-
     return (
         <div className="main_component_todo_todos_todoList_filters">
             <div className="main_component_todo_todos_todoList_filters_quantity">

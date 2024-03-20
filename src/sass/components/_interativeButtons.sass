@@ -4,12 +4,13 @@
     .main_component_todo_todos_todoList_filters_quantity
         p
             color: $Dark-Grayish-Blue
-            font-size: 10px
+            font-size: 8px
             margin: 15px
     
 
     button
         margin: 5px
+        font-size: 9px
         background: none
         border: none
         color: $Dark-Grayish-Blue
@@ -18,5 +19,20 @@
     .main_component_todo_todos_todoList_filters_compleated
         button
             color: $Dark-Grayish-Blue
-            font-size: 10px
+            font-size: 8px
             margin: 15px
+
+@media (max-width : 1024px) 
+    .main_component_todo_todos_todoList
+        @include flexDisplay (row, center, center)
+        width: 90vw
+        .main_component_todo_todos_todoList_filters_filters
+            @include flexDisplay (row, center, space-evenly)
+
+            width: 90vw
+            button 
+                font-size: 12px
+
+    .main_component_todo_todos_todoList_filters_compleated, .main_component_todo_todos_todoList_filters_quantity
+        display: none
+    

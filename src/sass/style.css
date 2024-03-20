@@ -87,6 +87,11 @@ input {
   cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+  .main_component_todo_todos {
+    width: 90vw !important;
+  }
+}
 .main_component_todo_todos_todoList {
   margin-top: 30px;
   border-radius: 3px;
@@ -200,11 +205,12 @@ input {
 }
 .main_component_todo_todos_todoList_filters .main_component_todo_todos_todoList_filters_quantity p {
   color: hsl(234, 11%, 52%);
-  font-size: 10px;
+  font-size: 8px;
   margin: 15px;
 }
 .main_component_todo_todos_todoList_filters button {
   margin: 5px;
+  font-size: 9px;
   background: none;
   border: none;
   color: hsl(234, 11%, 52%);
@@ -212,10 +218,32 @@ input {
 }
 .main_component_todo_todos_todoList_filters .main_component_todo_todos_todoList_filters_compleated button {
   color: hsl(234, 11%, 52%);
-  font-size: 10px;
+  font-size: 8px;
   margin: 15px;
 }
 
+@media (max-width: 1024px) {
+  .main_component_todo_todos_todoList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+  }
+  .main_component_todo_todos_todoList .main_component_todo_todos_todoList_filters_filters {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90vw;
+  }
+  .main_component_todo_todos_todoList .main_component_todo_todos_todoList_filters_filters button {
+    font-size: 12px;
+  }
+  .main_component_todo_todos_todoList_filters_compleated, .main_component_todo_todos_todoList_filters_quantity {
+    display: none;
+  }
+}
 body {
   font-family: "Josefin Sans", sans-serif;
 }

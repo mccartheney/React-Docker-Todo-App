@@ -11,7 +11,11 @@ const Todo = (props) => {
     // get theme states from props 
     const {theme, setTheme} = props;
 
+    // create state for todo list
     const [todoList, setTodoList] = useState([]);
+
+    // crate state to select the type of todos will be showed
+    const [ActualTodoOption, setActualTodoOption] = useState("all")
 
     // return main todo functionalities
     return (
@@ -21,10 +25,10 @@ const Todo = (props) => {
                 <TodoHeader theme={theme} setTheme={setTheme}/>
 
                 {/* create new todo */}
-                <TodoInput setTodoList={setTodoList} todoList={todoList}/>
+                <TodoInput setTodoList={setTodoList} todoList={todoList} setActualTodoOption={setActualTodoOption} />
 
                 {/* show todos and todo options */}
-                <TodoList todoList={todoList} setTodoList={setTodoList}/>
+                <TodoList todoList={todoList} setTodoList={setTodoList} ActualTodoOption={ActualTodoOption} setActualTodoOption={setActualTodoOption}/>
             </div>
         </div>
     );

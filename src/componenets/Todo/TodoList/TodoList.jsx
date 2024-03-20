@@ -10,10 +10,8 @@ import InterativeButtons from "./components/InterativeButton"
 // Compontent for return todo list
 const TodoList = (props) => {
     // get todoList states from props
-    const {todoList, setTodoList} = props;
+    const { todoList, setTodoList, ActualTodoOption, setActualTodoOption } = props;
 
-    // crate state to select the type of todos will be showed
-    const [ActualTodoOption, setActualTodoOption ] = useState ("all")
 
     // return todo list html
     return (
@@ -28,7 +26,7 @@ const TodoList = (props) => {
                     <ActiveTodos todoList={todoList} setTodoList={setTodoList}/>)}
                     
             {/* display Interative Buttons */}
-            <InterativeButtons todoList={todoList} setTodoList={setTodoList} setActualTodoOption={setActualTodoOption}/>
+            <InterativeButtons todoList={todoList} setTodoList={setTodoList} setActualTodoOption={setActualTodoOption} />
         </div>
     )
 } 

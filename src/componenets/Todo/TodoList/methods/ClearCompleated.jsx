@@ -1,7 +1,8 @@
+// fucntion to clear all compleated todos
 const ClearCompleated = (setTodoList) => {
-
-
-    setTodoList(arrayOfTodos => {   
+    // chaneg todo list
+    setTodoList(arrayOfTodos => {
+        // return only todos that dont is compleated   
         return arrayOfTodos.filter(todoObj => todoObj.compleated !== true)
     })
 }

@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // funtion to create new todo
-const AddNewTodo = (event, value, id, setTodoList, todoList) => {
+const AddNewTodo = (event, value, id, setTodoList, ) => {
     // dont reload page when add new todo
     event.preventDefault();
 
@@ -22,7 +22,7 @@ const AddNewTodo = (event, value, id, setTodoList, todoList) => {
 // main component
 const TodoInput = (props) => {
     // get todo states from props
-    const {todolist, setTodoList} = props
+    const { todolist, setTodoList, setActualTodoOption} = props
 
     // create states for new todo input
     const [inputValue, setInputValue] = useState("")
@@ -33,7 +33,10 @@ const TodoInput = (props) => {
         //      add new todo with arguments:
         //          -event, input value, id, listStates
         <form className="main_component_todo_todos_inputTodo" 
-            onSubmit={(event) => AddNewTodo(event, inputValue, Math.floor(Math.random() * 100), setTodoList, todolist)}>
+            onSubmit={(event) => {
+                AddNewTodo(event, inputValue, Math.floor(Math.random() * 100), setTodoList, todolist)
+                setActualTodoOption("all")
+            }}>
             <input type="marker" disabled="disabled" className="main_component_todo_todos_inputTodo-marker" />
 
             {/* input with the value for new todo */}
