@@ -1,5 +1,7 @@
 const ClearCompleated = (setTodoList) => {
-    setTodoList(arrayOfTodos => {
+
+
+    setTodoList(arrayOfTodos => {   
         return arrayOfTodos.filter(todoObj => todoObj.compleated !== true)
     })
 }

@@ -59,7 +59,7 @@ const TodoItem = ({ id, value, compleated, setTodoList, todoList}) => {
                     {value}
                 </p>
                 
-                <button onClick={() => DeleteTodo(setTodoList, id)}>
+                <button onClick={() => DeleteTodo(setTodoList, id, setActualClass)}>
                     <img src={cross} alt="delete"/>
                 </button>
             </div>

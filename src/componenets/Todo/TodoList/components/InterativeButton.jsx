@@ -23,7 +23,10 @@ const InterativeButtons = ({ setActualTodoOption, setTodoList, todoList }) => {
             </div>
 
             <div className="main_component_todo_todos_todoList_filters_compleated">
-                <button onClick={() => { ClearCompleated(setTodoList)}}>
+                <button onClick={() => { 
+                    ClearCompleated(setTodoList)
+                    setActualTodoOption("actived")
+                }}>
                     Clear Compleated
                 </button>
             </div>

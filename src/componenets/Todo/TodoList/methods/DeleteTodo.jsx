@@ -1,4 +1,5 @@
-const DeleteTodo = (setTodoList, id) => {
+const DeleteTodo = (setTodoList, id, setClass) => {
+    setClass("disable")
     setTodoList(arrayOfTodos =>{
         return arrayOfTodos.filter(todoObj => todoObj.id !== id);
     });
