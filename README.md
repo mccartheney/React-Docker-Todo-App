@@ -53,19 +53,12 @@ Before running this project, you need to have Docker installed on your machine. 
    cd react-todo-app
    ```
 
-3. Build the Docker image:
-
+3. Build and run the Docker image with Makefile:
    ```sh
-   docker build -t react-todo-app .
+   make build-run
    ```
 
-4. Run the Docker container:
-
-   ```sh
-   docker run -it -p 3000:3000 react-todo-app
-   ```
-
-5. Open your browser and go to http://localhost:3000 to view the application.
+4. Open your browser and go to http://localhost:3000 to view the application.
 
 ### Author
 

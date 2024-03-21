@@ -13,4 +13,6 @@ RUN npm install
 # Copy the entire application code to the container
 COPY . .
 
+EXPOSE 3000
+
 CMD npm start
